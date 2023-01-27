@@ -13,7 +13,7 @@ st.markdown("_Created by [Adam Gilani](https://twitter.com/adamgilani) and [Bren
 
 
 # Make the request and store the response.
-response = requests.get("https://www.cnn.com/2023/01/24/politics/pence-classified-documents-fbi/index.html")
+response = requests.get(video_url)
 
 # Parse the HTML content of the website.
 soup = BeautifulSoup(response.content, "html.parser")
