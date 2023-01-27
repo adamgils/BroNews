@@ -36,7 +36,7 @@ lower_singular_pronouns = ['me', 'my', 'mine', 'you', 'your', 'yours', 'he', 'hi
                            'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'yourselves',
                            'themselves']
 name_list = []
-new_text = " "
+new_text = "So basically bro..."
 # Iterate through each word in article's text
 
 def Bronews():
