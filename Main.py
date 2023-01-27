@@ -107,7 +107,7 @@ def Bronews():
 
 if video_url:
     # Text generation spinner
-    with st.spinner("Just wait a second bro..."):
+    with st.spinner("Woah there. Hold your horses brother..."):
         # Generate the summarization text
         summary = Bronews()
     # Feed the summarization text to the app
