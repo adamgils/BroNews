@@ -109,6 +109,6 @@ if video_url:
         # Generate the summarization text
         summary = Bronews()
     # Feed the summarization text to the app
-    for paragraph in summary:
+    for paragraph in summary.split("/n"):
         st.write(paragraph + "\n")
 
