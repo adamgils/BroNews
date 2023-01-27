@@ -40,7 +40,7 @@ def Bronews():
                                'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'yourselves',
                                'themselves']
     name_list = []
-    new_text = "So basically bro..."
+    new_text = ""
     
     for word in article_text:
         # If word is an uppercase singular pronoun, change it to "Bro" then add it to new text list
