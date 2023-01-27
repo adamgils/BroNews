@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 """
 st.markdown("Bro News for Bros made by Bros")
 video_url = st.text_input("_:red[Enter an Article URL:]_")
-st.markdown("_Created by [Adam Gilani](https://twitter.com/adamgilani) and [Brendan Arias](google.com)_")
+st.markdown("_Created by [Adam Gilani](https://twitter.com/adamgilani) and [Brendan Arias](https://www.linkedin.com/in/brendan-arias/)_")
 
 
 
