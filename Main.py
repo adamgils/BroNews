@@ -69,7 +69,7 @@ def Bronews():
     # Make name list a set to get rid of duplicates, and remove empty instances
     name_list = list(set(name_list))
     if '' in name_list:
-        name_list.remove(' ')
+        name_list.remove('')
     
     new_name_list = ""
     for name in name_list:
