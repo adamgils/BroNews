@@ -1,5 +1,5 @@
 # BroNews - Bro News for Bros made by Bros
-Live version of this app at [bronews.streamlit.app/)
+Live version of this app at [bronews.streamlit.app/](https://bronews.streamlit.app/)
 
 ## Description
 This app, BroNews, finds every instance of a pronoun or name in an article and replaces it with bro, Bro, or Bro's given the replacement.
