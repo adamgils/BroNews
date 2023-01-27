@@ -19,6 +19,7 @@ response = requests.get("https://www.cnn.com/2023/01/24/politics/pence-classifie
 soup = BeautifulSoup(response.content, "html.parser")
 
 # Extract the text from the website and print it.
+article_text = " "
 for p in soup.find_all("p"):
     article_text += p.text + '/n'
 
