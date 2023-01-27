@@ -12,34 +12,36 @@ video_url = st.text_input("_:red[Enter an Article URL:]_")
 st.markdown("_Created by [Adam Gilani](https://twitter.com/adamgilani) and [Brendan Arias](google.com)_")
 
 
-# Make the request and store the response.
-response = requests.get(video_url)
 
-# Parse the HTML content of the website.
-soup = BeautifulSoup(response.content, "html.parser")
-
-# Extract the text from the website and print it.
-article_text = " "
-for p in soup.find_all("p"):
-    article_text += p.text + '/n'
-
-# Split text into a list of words
-article_text = article_text.split()
-
-# Use lists of pronouns to compare to text to replace with Bro
-upper_singular_pronouns = ['I', 'Me', 'My', 'Mine', 'You', 'You', 'Your', 'Yours', 'He', 'Him', 'His', 'His', 'She',
-                           'Her', 'Her', 'Hers', 'It', 'It', 'Its', 'We', 'Us', 'Our', 'Ours', 'You', 'You', 'Your',
-                           'Yours', 'They', 'Them', 'Their', 'Theirs', 'Myself', 'Yourself', 'Himself', 'Herself',
-                           'Itself', 'Ourselves', 'Yourselves', 'Themselves']
-lower_singular_pronouns = ['me', 'my', 'mine', 'you', 'your', 'yours', 'he', 'him', 'him', 'his', 'she', 'her', 'hers',
-                           'it', 'its', 'we', 'us', 'our', 'you', 'your', 'yours', 'they', 'them', 'their', 'theirs',
-                           'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'yourselves',
-                           'themselves']
-name_list = []
-new_text = "So basically bro..."
 # Iterate through each word in article's text
 
 def Bronews():
+    # Make the request and store the response.
+    response = requests.get(video_url)
+
+    # Parse the HTML content of the website.
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    # Extract the text from the website and print it.
+    article_text = " "
+    for p in soup.find_all("p"):
+        article_text += p.text + '/n'
+
+    # Split text into a list of words
+    article_text = article_text.split()
+
+    # Use lists of pronouns to compare to text to replace with Bro
+    upper_singular_pronouns = ['I', 'Me', 'My', 'Mine', 'You', 'You', 'Your', 'Yours', 'He', 'Him', 'His', 'His', 'She',
+                               'Her', 'Her', 'Hers', 'It', 'It', 'Its', 'We', 'Us', 'Our', 'Ours', 'You', 'You', 'Your',
+                               'Yours', 'They', 'Them', 'Their', 'Theirs', 'Myself', 'Yourself', 'Himself', 'Herself',
+                               'Itself', 'Ourselves', 'Yourselves', 'Themselves']
+    lower_singular_pronouns = ['me', 'my', 'mine', 'you', 'your', 'yours', 'he', 'him', 'him', 'his', 'she', 'her', 'hers',
+                               'it', 'its', 'we', 'us', 'our', 'you', 'your', 'yours', 'they', 'them', 'their', 'theirs',
+                               'myself', 'yourself', 'himself', 'herself', 'itself', 'ourselves', 'yourselves',
+                               'themselves']
+    name_list = []
+    new_text = "So basically bro..."
+    
     for word in article_text:
         # If word is an uppercase singular pronoun, change it to "Bro" then add it to new text list
         if word in upper_singular_pronouns:
