@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 from bs4 import BeautifulSoup
+from Names import common_names
 
 # UI Text
 
@@ -45,7 +46,7 @@ def Bronews():
     
     for word in article_text:
         # If word is an uppercase singular pronoun, change it to "Bro" then add it to new text list
-        if word in upper_singular_pronouns:
+        if word in upper_singular_pronouns or common_names:
             word = "Bro"
             new_text += word
             new_text += " "
