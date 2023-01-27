@@ -99,7 +99,7 @@ def Bronews():
             newer_text += target
             newer_text += " "
             
-    newer_text = newer_text.split("\n")
+    newer_text = newer_text.split("/n")
     
     return newer_text
 
@@ -108,7 +108,6 @@ if video_url:
     with st.spinner("Please wait while your Bro News is being generated..."):
         # Generate the summarization text
         summary = Bronews()
-        summary.split("/n")
     # Feed the summarization text to the app
     for paragraph in summary:
         st.write(paragraph + "\n")
