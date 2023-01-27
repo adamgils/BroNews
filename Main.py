@@ -25,7 +25,7 @@ def Bronews():
     # Extract the text from the website and print it.
     article_text = " "
     for p in soup.find_all("p"):
-        article_text += p.text + '\n                                                                                            '
+        article_text += p.text + '/n'
 
     # Split text into a list of words
     article_text = article_text.split()
@@ -99,6 +99,8 @@ def Bronews():
             newer_text += target
             newer_text += " "
             
+    newer_text = newer_text.split("\n")
+    
     return newer_text
 
 if video_url:
@@ -106,6 +108,7 @@ if video_url:
     with st.spinner("Please wait while your Bro News is being generated..."):
         # Generate the summarization text
         summary = Bronews()
-
     # Feed the summarization text to the app
-    st.write(summary)
+    for paragraph in summary:
+        st.write(paragraph + "\n")
+
