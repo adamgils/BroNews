@@ -98,6 +98,8 @@ def Bronews():
         else:
             newer_text += target
             newer_text += " "
+            
+    return newer_text
 
 if video_url:
     # Text generation spinner
