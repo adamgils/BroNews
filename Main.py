@@ -12,9 +12,6 @@ video_url = st.text_input("_:red[Enter an Article URL:]_")
 st.markdown("_Created by [Adam Gilani](https://twitter.com/adamgilani) and [Brendan Arias](google.com)_")
 
 
-
-article_text = ""
-
 # Make the request and store the response.
 response = requests.get("https://www.cnn.com/2023/01/24/politics/pence-classified-documents-fbi/index.html")
 
